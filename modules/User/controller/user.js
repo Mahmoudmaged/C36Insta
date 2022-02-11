@@ -24,13 +24,13 @@ const signup = async(req, res) => {
 
             const message = `<a href="${req.protocol}://${req.headers.host}/user/confirm/${token}">click me </a> <br>
             <a href="${req.protocol}://${req.headers.host}/user/email/re_send/${refreshToken}">re-send activation  link </a>`
-            await sendEmail(email, message)
+            // await sendEmail(email, message)
             res.status(201).json({ message: "Done", status: 201 })
 
         }
 
     } catch (error) {
-        res.status(500).json({ message: "catch err ", error })
+        res.status(500).json({ message: "catch err 5 ", error })
     }
 }
 
