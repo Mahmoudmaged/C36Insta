@@ -91,5 +91,8 @@ app.get("/pdf", async(req, res) => {
     }])
     res.end()
 })
+app.get("/" , (req,res)=>{
+    res.json({message:"Welcome to C36Insat BackEnd"})
+})
 connectDB()
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
