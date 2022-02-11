@@ -8,7 +8,7 @@ async function sendEmail(dest, message , attachment) {
         attach  = attachment
     }
     let transporter = nodemailer.createTransport({
-        port: 587 || 50000,
+        port: process.env.PORT || 587 || 58555,
         secure: false, // true for 465, false for other ports
         service:'gmail',
         auth: {
